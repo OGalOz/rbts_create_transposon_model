@@ -77,7 +77,7 @@ class rbts_create_transposon_model:
 
         report = KBaseReport(self.callback_url)
         report_info = report.create({'report': {'objects_created':[],
-                                                'text_message': params['parameter_1']},
+                                                'text_message': f"Finished making Model {params['output_name']}" },
                                                 'workspace_name': params['workspace_name']})
         output = {
             'report_name': report_info['name'],
