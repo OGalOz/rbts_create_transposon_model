@@ -3,7 +3,6 @@ import logging
 import re
 import shutil
 import datetime
-import pandas as pd
 from installed_clients.DataFileUtilClient import DataFileUtil
 from installed_clients.WorkspaceClient import Workspace
 
