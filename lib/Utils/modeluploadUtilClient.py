@@ -87,7 +87,7 @@ class modeluploadUtil:
         for p in [
             "username",
             "description",
-            "output_names",
+            "output_name",
             "standard_model_name"
         ]:
             if p not in self.params:
