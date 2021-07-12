@@ -12,8 +12,8 @@
     "parameters": [ 
         {
             "id": "standard_model_name",
-            "optional": true,
-            "advanced": true,
+            "optional": false,
+            "advanced": false,
             "allow_multiple": false,
             "default_values": [""],
             "field_type": "dropdown",
