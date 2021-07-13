@@ -63,5 +63,16 @@ class rbts_create_transposon_modelTest(unittest.TestCase):
         #
         # Check returned data with
         # self.assertEqual(ret[...], ...) or other unittest methods
-        ret = self.serviceImpl.run_rbts_create_transposon_model(self.ctx, {'workspace_name': self.wsName,
-                                                             'parameter_1': 'Hello World!'})
+        
+        test_d = {
+            'workspace_name': self.wsName,
+            'standard_model_name': 'magic_mariner' ,
+            'model_str':'' ,
+            'past_end_str':'' ,
+            'description': 'testjul13' ,
+            'output_name': 'testjul13',
+            'test_mode': 1
+        }
+
+
+        ret = self.serviceImpl.run_rbts_create_transposon_model(self.ctx, test_d)
