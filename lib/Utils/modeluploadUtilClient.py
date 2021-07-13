@@ -48,7 +48,7 @@ class modeluploadUtil:
 
         # We create the data for the object
         model_data = {
-            "file_type": "KBaseRBTnSeq.RBTS_Model",
+            "file_type": "KBaseRBTnSeq.RBTS_TransposonModel",
             "utc_created": str(date_time),
             "standard_model_name": self.params["standard_model_name"],
             "model_string": model_str,
@@ -63,7 +63,7 @@ class modeluploadUtil:
             "id": ws_id,
             "objects": [
                 {
-                    "type": "KBaseRBTnSeq.RBTS_Model",
+                    "type": "KBaseRBTnSeq.RBTS_TransposonModel",
                     "data": model_data,
                     "name": model_name,
                 }
