@@ -1,10 +1,10 @@
 #
 # define display information
 #
-name: RBTnSeq Create Transposon Model 
+name: RBTnSeq Create TnSeq Model 
 
 tooltip: |
-    Create the datatypes which holds the transposon flanking sequence information.
+    Create the datatypes which holds the transposon flanking sequence information for RBTnSeq.
 
 screenshots: []
 
