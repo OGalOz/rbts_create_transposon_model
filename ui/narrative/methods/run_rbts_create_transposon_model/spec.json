@@ -1,161 +1,182 @@
 {
-    "ver": "0.0.1",
-    "authors": [
-        "omreegaloz"
-    ],
-    "contact": "",
-    "categories": ["active"],
-    "widgets": {
-        "input": null,
-        "output": null
+  "ver": "0.0.1",
+  "authors": [
+    "omreegaloz"
+  ],
+  "contact": "",
+  "categories": [
+    "active"
+  ],
+  "widgets": {
+    "input": null,
+    "output": "no-display"
+  },
+  "parameters": [
+    {
+      "id": "standard_model_name",
+      "optional": false,
+      "advanced": false,
+      "allow_multiple": false,
+      "default_values": [
+        ""
+      ],
+      "field_type": "dropdown",
+      "dropdown_options": {
+        "options": [
+          {
+            "value": "Custom",
+            "display": "Custom - (Advanced)"
+          },
+          {
+            "value": "Sc_Tn5",
+            "display": "Sc_Tn5"
+          },
+          {
+            "value": "ezTn5_Tet_Bifido",
+            "display": "ezTn5_Tet_Bifido"
+          },
+          {
+            "value": "ezTn5_kan1",
+            "display": "ezTn5_kan1"
+          },
+          {
+            "value": "ezTn5_kanU",
+            "display": "ezTn5_kanU"
+          },
+          {
+            "value": "magic_Tn5",
+            "display": "magic_Tn5"
+          },
+          {
+            "value": "magic_mariner",
+            "display": "magic_mariner"
+          },
+          {
+            "value": "magic_mariner.2",
+            "display": "magic_mariner.2"
+          },
+          {
+            "value": "pHIMAR_kan",
+            "display": "pHIMAR_kan"
+          },
+          {
+            "value": "pKMW3",
+            "display": "pKMW3"
+          },
+          {
+            "value": "pKMW3_universal",
+            "display": "pKMW3_universal"
+          },
+          {
+            "value": "pKMW7",
+            "display": "pKMW7"
+          },
+          {
+            "value": "pKMW7_U",
+            "display": "pKMW7_U"
+          }
+        ]
+      }
     },
-    "parameters": [ 
-        {
-            "id": "standard_model_name",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
-            "default_values": [""],
-            "field_type": "dropdown",
-            "dropdown_options": {
-                "options": [{
-                    "value": "Custom",
-                    "display": "Custom - (Advanced)"
-                },
-                {
-                    "value": "Sc_Tn5",
-                    "display": "Sc_Tn5"
-                },
-                {
-                    "value": "ezTn5_Tet_Bifido",
-                    "display": "ezTn5_Tet_Bifido"
-                },
-                 {
-                    "value": "ezTn5_kan1",
-                    "display": "ezTn5_kan1"
-                },
-                 {
-                    "value": "ezTn5_kanU",
-                    "display": "ezTn5_kanU"
-                },
-                {
-                    "value": "magic_Tn5",
-                    "display": "magic_Tn5"
-                },
-                {
-                    "value": "magic_mariner",
-                    "display": "magic_mariner"
-                },
-                {
-                    "value": "magic_mariner.2",
-                    "display": "magic_mariner.2"
-                },
-                {
-                    "value": "pHIMAR_kan",
-                    "display": "pHIMAR_kan"
-                },
-                {
-                    "value": "pKMW3",
-                    "display": "pKMW3"
-                },
-                {
-                    "value": "pKMW3_universal",
-                    "display": "pKMW3_universal"
-                },
-                {
-                    "value": "pKMW7",
-                    "display": "pKMW7"
-                },
-                {
-                    "value": "pKMW7_U",
-                    "display": "pKMW7_U"
-                }]
-            }
-
-        },
-        {
-            "id": "model_str",
-            "optional": true,
-            "advanced": true,
-            "allow_multiple": false,
-            "default_values": [""],
-            "field_type": "text"
-        },
-        {
-            "id": "past_end_str",
-            "optional": true,
-            "advanced": true,
-            "allow_multiple": false,
-            "default_values": [""],
-            "field_type": "text"
-        },
-        {
-            "id": "description",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
-            "default_values": [""],
-            "field_type": "textarea",
-            "textarea_options": {
-                "n_rows": 3
-            }
-        },
-        {
-            "id": "output_name",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
-            "default_values": [ "" ],
-            "field_type": "text",
-            "text_options": {
-                "is_output_name": true
-            }
-        }
-    ],
-    "behavior": {
-        "service-mapping": {
-            "url": "",
-            "name": "rbts_create_transposon_model",
-            "method": "run_rbts_create_transposon_model",
-            "input_mapping": [
-                {
-                    "narrative_system_variable": "workspace",
-                    "target_property": "workspace_name"
-                },{
-                    "narrative_system_variable": "workspace_id",
-                    "target_property": "workspace_id"
-                },
-                {
-                    "input_parameter": "standard_model_name",
-                    "target_property": "standard_model_name"
-                },
-                {
-                    "input_parameter": "model_str",
-                    "target_property": "model_str"
-                },
-                {
-                    "input_parameter": "past_end_str",
-                    "target_property": "past_end_str"
-                },
-                {
-                    "input_parameter": "description",
-                    "target_property": "description"
-                },
-                {
-                    "input_parameter": "output_name",
-                    "target_property": "output_name"
-                }
-            ],
-            "output_mapping": [
-                {
-                    "service_method_output_path": [0,"report_name"],
-                    "target_property": "report_name"
-                },{
-                    "service_method_output_path": [0,"report_ref"],
-                    "target_property": "report_ref"
-                }
-            ]
-        }
+    {
+      "id": "model_str",
+      "optional": true,
+      "advanced": true,
+      "allow_multiple": false,
+      "default_values": [
+        ""
+      ],
+      "field_type": "text"
     },
-    "job_id_output_field": "docker"
+    {
+      "id": "past_end_str",
+      "optional": true,
+      "advanced": true,
+      "allow_multiple": false,
+      "default_values": [
+        ""
+      ],
+      "field_type": "text"
+    },
+    {
+      "id": "description",
+      "optional": false,
+      "advanced": false,
+      "allow_multiple": false,
+      "default_values": [
+        ""
+      ],
+      "field_type": "textarea",
+      "textarea_options": {
+        "n_rows": 3
+      }
+    },
+    {
+      "id": "output_name",
+      "optional": false,
+      "advanced": false,
+      "allow_multiple": false,
+      "default_values": [
+        ""
+      ],
+      "field_type": "text",
+      "text_options": {
+        "is_output_name": true
+      }
+    }
+  ],
+  "behavior": {
+    "service-mapping": {
+      "url": "",
+      "name": "rbts_create_transposon_model",
+      "method": "run_rbts_create_transposon_model",
+      "input_mapping": [
+        {
+          "narrative_system_variable": "workspace",
+          "target_property": "workspace_name"
+        },
+        {
+          "narrative_system_variable": "workspace_id",
+          "target_property": "workspace_id"
+        },
+        {
+          "input_parameter": "standard_model_name",
+          "target_property": "standard_model_name"
+        },
+        {
+          "input_parameter": "model_str",
+          "target_property": "model_str"
+        },
+        {
+          "input_parameter": "past_end_str",
+          "target_property": "past_end_str"
+        },
+        {
+          "input_parameter": "description",
+          "target_property": "description"
+        },
+        {
+          "input_parameter": "output_name",
+          "target_property": "output_name"
+        }
+      ],
+      "output_mapping": [
+        {
+          "service_method_output_path": [
+            0,
+            "report_name"
+          ],
+          "target_property": "report_name"
+        },
+        {
+          "service_method_output_path": [
+            0,
+            "report_ref"
+          ],
+          "target_property": "report_ref"
+        }
+      ]
+    }
+  },
+  "job_id_output_field": "docker"
 }
